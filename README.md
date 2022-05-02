@@ -4,7 +4,7 @@
 This script requires Yuna Connector, it can be found in my profile.
 ## Download and Usage 💻 
 
-
+![github-small](https://i.imgur.com/duVDioZ.png)
 
 
 - Download `git clone https://github.com/yuriwithdaggers/nick_checker`
