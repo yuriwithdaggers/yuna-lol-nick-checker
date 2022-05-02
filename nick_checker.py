@@ -1,7 +1,8 @@
+#encoding: utf-8
 ####### Drag "yuna.py" to your folder.
 from yuna import yuna
 ####### git clone https://github.com/yuriwithdaggers/yuna.git
-
+#encoding: utf-8
 from colorama import Fore, Back, Style, init
 init(convert=True)
 import json
@@ -9,8 +10,8 @@ import json
 
 def nicks():
     try:
-        with open('nicks.txt', 'r') as f:
-            f = f.read().replace("\n", " ")
+        with open('nicks.txt', 'r', encoding='utf-8') as f:
+            f = f.read().replace("\n", "-")
         return f
     except (AttributeError, FileNotFoundError):
         print('Make sure there is a nicks.txt in the folder')
@@ -18,7 +19,7 @@ def nicks():
 def check():
     try:
         kek = nicks()
-        i = kek.strip(' ').split(' ')
+        i = kek.strip(' ').split('-')
         for nick in i:
             r = yuna('get', f'/lol-summoner/v1/check-name-availability/{nick}')
             r = json.loads(r.content)
